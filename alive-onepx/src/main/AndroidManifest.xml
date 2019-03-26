@@ -16,6 +16,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 保活 -->
+        <activity android:name="com.fxp.alive.onepx.AliveActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:taskAffinity="com.fxp.alive.onepx"
+            android:configChanges="keyboardHidden|orientation|screenSize|navigation|keyboard"
+            android:theme="@style/OnePxActStyle">
+            <intent-filter>
+                <action android:name="com.fxp.alive.onepx.AliveActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.fxp.alive.onepx.AliveReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <provider
+            android:authorities="${applicationId}.AliveProvider"
+            android:name="com.fxp.alive.onepx.AliveProvider"
+            android:exported="true">
+        </provider>
     </application>
 
 </manifest>
