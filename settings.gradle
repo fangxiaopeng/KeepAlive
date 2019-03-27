@@ -1,1 +1,1 @@
-include ':app', ':alive-onepx'
+include ':app', ':alive-onepx', ':alive-doubleprocess'
