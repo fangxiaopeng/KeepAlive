@@ -68,6 +68,15 @@ public class AliveManager {
         }
     }
 
+    /**
+     * @Description: 实测华为手机可正常调起AliveActivity。小米手机调不起来
+     *
+     * @Author:  fxp
+     * @Date:    2019/3/27   9:53 AM
+     * @param
+     * @return   void
+     * @exception/throws
+     */
     public void startAliveActivity(){
         try {
             Intent intent = new Intent();
