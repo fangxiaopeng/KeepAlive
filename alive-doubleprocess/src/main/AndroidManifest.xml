@@ -16,6 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".AliveService"/>
+        <service android:name=".AliveService$InnerService"/>
+        <service android:name=".LocalService" android:exported="true">
+            <intent-filter>
+                <action android:name="com.fxp.alive.doubleprocess.LocalService"/>
+            </intent-filter>
+        </service>
+        <service android:name=".RemoteService" android:process=":alive" android:exported="true">
+            <intent-filter>
+                <action android:name="com.fxp.alive.doubleprocess.RemoteService"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
